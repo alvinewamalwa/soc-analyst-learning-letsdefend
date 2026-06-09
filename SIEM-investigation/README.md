@@ -33,12 +33,53 @@ I analyzed the attachment using a sandbox environment known as Hybrid Analysis a
 I used Threat Intel to validate indicators associated with the file and infrastructure.
 
 
-## Conclusion
-
-The alert was confirmed as a phishing attempt involving a malicious attachment. The email was successfully delivered and compromised the user's system after it was opened. I contained the incident following the standard SOC procedures of LetsDefend to prevent other systems from being compromised.
 
 My Playbook
 
 After successfully investigating the alert and closing the case, I came up with my own playbook `https://app.letsdefend.io/case-management/casedetail/alvine12w/257` about the case.
 Playbook Note
 The alert (Event ID 257) was triggered by rule SOC282 indicating a potential phishing email. Analysis of the email metadata shows that it originated from SMTP IP 103.80.134.63 with sender address free@coffeeshooop.com, which appears suspicious and potentially spoofed. The subject "Free Coffee Voucher" suggests a social engineering attempt to lure the recipient. No URLs or attachments were identified in the email, and there is no evidence of user interaction or execution of malicious content on the host. Based on the analysis, the alert is classified as a phishing attempt with no confirmed compromise. Recommended actions include monitoring or blocking the sender address and performing further threat intelligence checks on the associated IP address.
+
+
+## Remediation and Response Actions
+
+Following the investigation of the phishing alert (Event ID 257), the following remediation and response actions are recommended based on the findings.
+
+### 1. Email Containment
+
+* The malicious email should be removed from the affected user’s mailbox.
+* The sender address and associated domain should be blocked at the email gateway to prevent further delivery attempts.
+* Similar emails should be searched across the organization to identify potential exposure to other users.
+
+### 2. Sender and Infrastructure Blocking
+
+* Block the sender email address `free@coffeeshooop.com`.
+* Block or monitor the associated SMTP IP address `103.80.134.63` in security controls.
+* Add indicators of compromise (IOCs) to threat intelligence and email filtering systems.
+
+### 3. Endpoint Protection
+
+* Ensure endpoint security tools are active and updated.
+* Scan the affected host for any residual malicious files or artifacts.
+* Confirm that no malicious processes or persistence mechanisms exist on the system.
+
+### 4. Threat Intelligence Actions
+
+* Enrich the SMTP IP address and sender domain using threat intelligence platforms.
+* Update internal detection rules based on observed phishing patterns and indicators.
+
+### 5. User Awareness
+
+* Inform the affected user about the phishing attempt.
+* Conduct phishing awareness training focusing on social engineering techniques such as urgency and reward-based scams.
+
+### 6. Monitoring and Detection Improvement
+
+* Increase monitoring for similar phishing patterns, especially emails using reward-based lures.
+* Update SIEM rules to detect similar attachments, domains, and behavioral indicators.
+* Review logs for any related activity from the same IP or domain across the environment.
+
+### Conclusion
+
+These remediation steps ensure containment of the identified phishing attempt, reduce the risk of recurrence, and strengthen overall detection and response capabilities within the environment.
+
