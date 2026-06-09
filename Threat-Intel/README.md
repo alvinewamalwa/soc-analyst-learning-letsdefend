@@ -16,7 +16,7 @@ The main objective was to identify the data source of the hash: `e1def6e8ab4b5bc
 
 I searched for this hash within the Threat Intel interface and identified its source as AbuseCH as shown below.
 
-![Threat Intelligence result showing hash lookup and data source AbuseCH](/Threat-Intel/screenshots/threat-intel.png)
+![Threat Intelligence result showing hash lookup and data source AbuseCH](/Threat-Intel/screenshots/Threat-Intel.png)
 
 This demonstrated how threat intelligence feeds provide context about where and how an indicator has been observed.
 
