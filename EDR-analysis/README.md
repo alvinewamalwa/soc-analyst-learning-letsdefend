@@ -32,7 +32,7 @@ The second objective required identifying the hostname of the device where a fil
 I performed an IOC-based search using the hash value within the EDR platform. The search results returned the affected endpoint, allowing me to determine the hostname of the compromised device as EricProd.
 
 The result is documented in the screenshot:
-![EDR process analysis showing mshta.exe execution on host Roberto](/EDR-analysis/screenshots/EDR-analysis.png)
+![EDR process analysis showing mshta.exe execution on host Roberto](/EDR-analysis/screenshots/hostname-EDR.png)
 
 ## Conclusion
 
