@@ -8,7 +8,7 @@ The alert was triggered by rule SOC282 – Phishing Alert: Deceptive Mail Detect
 
 I began the investigation by reviewing the full alert details to understand the context, including sender information, SMTP IP address, recipient, and email classification as shown below.
 
-![Description](/SIEM-investigation/screenshots/detail-info-257.png)
+![Description](/SIEM-investigation/screenshots/detailed-info-257.png)
 
 
 
@@ -22,7 +22,7 @@ A call-to-action button labeled “Redeem Now” was visible within the email co
 
 The email also contained a password-protected ZIP attachment named “free-coffee.zip”, with the password provided as “infected”.
 
-![Description](/SIEM-investigation/screenshots/phishing-email-1.png)
+ ![Description](/SIEM-investigation/screenshots/phishing-email-1.png)
 ![Description](/SIEM-investigation/screenshots/phishing-email-2.png)
 ![Description](/SIEM-investigation/screenshots/phishing-email-3.png)
 
