@@ -29,23 +29,35 @@ I navigated to the Log Management tab and used the search functionality to filte
 
 By looking at the source and destination addresses as shown below, it can be seen that there is an outbound connection.
 ![Description](/SIEM-investigation/screenshots/src-dest-addresses.png)
+I went ahead and viewed the raw log of each given entry.
 
-I went ahead and viewed the raw log of each given entry:
 
-Entry-1 Log:
+
+=================================================================================================================================
+Entry-1 Log: This log shows when Felix downloaded the email attachment.
 ![Description](/SIEM-investigation/screenshots/entry1-log.png)
-This log shows when Felix downloaded the email attachment.
 
-Entry-2 Log:
+==================================================================================================================================
+
+
+
+
+==================================================================================================================================
+Entry-2 Log: This log shows the Coffee.exe process communicates with a suspicious IP address through port 3451.
 ![Description](/SIEM-investigation/screenshots/entry2-log.png)
 This log shows the Coffee.exe process communicates with a suspicious IP address through port 3451.
 
+==================================================================================================================================
+
+
+
+=================================================================================================================================
 
 Entry-3 Log:
 ![Description](/SIEM-investigation/screenshots/entry3-log.png)
 Here the process fails to establish connection IP address 127.0.0.1
 
-
+==================================================================================================================================
 
 
 
