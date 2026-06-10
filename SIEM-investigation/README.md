@@ -45,14 +45,14 @@ I went ahead and viewed the raw log of each given entry.
 
 ## Entry-2 Log: This log shows the Coffee.exe process communicates with a suspicious IP address through port 3451.
 ![Description](/SIEM-investigation/screenshots/entry2-log.png)
-This log shows the Coffee.exe process communicates with a suspicious IP address through port 3451.
 
 
 
 
-## Entry-3 Log:
+
+## Entry-3 Log: Here the process fails to establish connection IP address 127.0.0.1
+
 ![Description](/SIEM-investigation/screenshots/entry3-log.png)
-Here the process fails to establish connection IP address 127.0.0.1
 
 
 
