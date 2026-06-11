@@ -1,6 +1,6 @@
 # SIEM Investigation – Phishing Alert Case (Event ID 257)
 
-This folder documents a SOC investigation I performed on a phishing alert generated in the LetsDefend SIEM platform. The case involved analyzing a deceptive email, identifying malicious indicators, and reviewing endpoint activity to determine potential compromise.
+This folder documents a SOC investigation I performed on a phishing alert generated in the LetsDefend SIEM platform. The case involved analyzing a deceptive email, identifying malicious indicators, reviewing endpoint activity to determine potential compromise, and to deploy deploy countermeasures to stop additional compromises.
 
 ## Alert Overview
 
