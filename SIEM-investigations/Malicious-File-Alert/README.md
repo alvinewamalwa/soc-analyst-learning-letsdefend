@@ -1,4 +1,4 @@
-# SIEM Investigation – Malicious File Alert
+<img width="941" height="357" alt="image" src="https://github.com/user-attachments/assets/704f74cf-7aca-465a-9a19-aa3e17ee56a1" /><img width="959" height="356" alt="image" src="https://github.com/user-attachments/assets/534e1e07-1042-455d-8746-fc1607d6964f" /># SIEM Investigation – Malicious File Alert
 
 ## Alert Overview
 
@@ -8,16 +8,16 @@ In this investigation, I analyzed a malicious file download attempt that was det
 
 ## Alert Details
 
-Event ID: 76
-Event Time: Mar 14, 2021 – 07:15 PM
-Rule: SOC137 – Malicious File/Script Download Attempt
-Severity Level: Medium
-Source IP Address: 172.16.17.37
-Hostname: NicolasPRD
-File Name: INVOICE PACKAGE LINK TO DOWNLOAD.docm
-File Hash: f2d0c66b801244c059f636d08a474079
-File Size: 16.66 KB
-Device Action: Blocked
+- Event ID: 76
+- Event Time: Mar 14, 2021 – 07:15 PM
+- Rule: SOC137 – Malicious File/Script Download Attempt
+- Severity Level: Medium
+- Source IP Address: 172.16.17.37
+- Hostname: NicolasPRD
+- File Name: INVOICE PACKAGE LINK TO DOWNLOAD.docm
+- File Hash: f2d0c66b801244c059f636d08a474079
+- File Size: 16.66 KB
+- Device Action: Blocked
 
 Screenshot: ![Alert Details](/SIEM-investigations/Malicious-File-Alert/screenshots/Detail-Info-Alert.png)
 
@@ -58,16 +58,19 @@ This time gap made it unreliable to depend solely on timestamp-based filtering.
 
 I further analyzed logs from the log management system.
 
-* I identified three related events from March 7, 2021
+* I identified three related events from March 7, 2021 as shown below
+ ![Alert Details](/SIEM-investigations/Malicious-File-Alert/screenshots/The-Three-Events.png)
 * I extracted the requested URLs from each event
+  for example the first event's URL: ![Alert Details](/SIEM-investigations/Malicious-File-Alert/screenshots/Requested-URL.png)
 * All URLs were confirmed malicious through VirusTotal analysis
+ for example the Virus Total results of the first event's URL: ![Alert Details](/SIEM-investigations/Malicious-File-Alert/screenshots/1-Virustotal-Result.png)
 
 ### Observations:
 
-* Various vendors flagged the Requested URLs as malicious from each event
+* Various security vendors flagged the Requested URLs as malicious from each event
 * There were no logs from the endpoint after March 7, suggesting possible evasion or inactivity
 
-Video Evidence: 2-Virus-Total-Results.mp4
+
 
 ---
 
@@ -86,7 +89,7 @@ Although the file was blocked at the time of the alert, prior activity suggests 
 ## Response Actions
 
 * The malicious file download attempt was blocked by the SIEM system
-* I proceeded to contain the affected endpoint as a precautionary measure
+* I proceeded to contain the affected endpoint as a precautionary measure at the Endpoint Security page
 * The threat was handled in line with containment procedures, preventing further risk to the system
 ![Alert Details](/SIEM-investigations/Malicious-File-Alert/screenshots/Host-Contained.png)
 ---
