@@ -8,7 +8,7 @@ The alert was triggered by rule SOC282 – Phishing Alert: Deceptive Mail Detect
 
 I began the investigation by reviewing the full alert details to understand the context, including sender information, SMTP IP address, recipient, and email classification as shown below.
 
-![Description](/SIEM-investigation/Phishing-Alert/screenshots/detailed-info-257.png)
+![Description](/SIEM-investigations/Phishing-Alert/screenshots/detailed-info-257.png)
 
 
 
@@ -22,20 +22,20 @@ A call-to-action button labeled “Redeem Now” was visible within the email co
 
 The email also contained a password-protected ZIP attachment named “free-coffee.zip”, with the password provided as “infected”.
 
- ![Description](/SIEM-investigation/Phishing-Alert/screenshots/phishing-email-1.png)![Description](/SIEM-investigation/Phishing-Alert/screenshots/phishing-email-2.png)![Description](/SIEM-investigation/Phishing-Alert/screenshots/phishing-email-3.png)
+ ![Description](/SIEM-investigations/Phishing-Alert/screenshots/phishing-email-1.png)![Description](/SIEM-investigations/Phishing-Alert/screenshots/phishing-email-2.png)![Description](/SIEM-investigations/Phishing-Alert/screenshots/phishing-email-3.png)
 
 
 I navigated to the Log Management tab and used the search functionality to filter on the log data and focused on entries relevant to this investigation. By searching for the host's IP address I could view the logs and network connections associated with the host. I analyzed the logs from the relevant time period.
 
 By looking at the source and destination addresses as shown below, it can be seen that there is an outbound connection.
-![Description](/SIEM-investigation/Phishing-Alert/screenshots/src-dest-addresses.png)
+![Description](/SIEM-investigations/Phishing-Alert/screenshots/src-dest-addresses.png)
 I went ahead and viewed the raw log of each given entry.
 
 
 
 
 ## Entry-1 Log: This log shows when Felix downloaded the email attachment.
-![Description](/SIEM-investigation/Phishing-Alert/screenshots/entry1-log.png)
+![Description](/SIEM-investigations/Phishing-Alert/screenshots/entry1-log.png)
 
 
 
@@ -44,7 +44,7 @@ I went ahead and viewed the raw log of each given entry.
 
 
 ## Entry-2 Log: This log shows the Coffee.exe process communicates with a suspicious IP address through port 3451.
-![Description](/SIEM-investigation/Phishing-Alert/screenshots/entry2-log.png)
+![Description](/SIEM-investigations/Phishing-Alert/screenshots/entry2-log.png)
 
 
 
@@ -52,7 +52,7 @@ I went ahead and viewed the raw log of each given entry.
 
 ## Entry-3 Log: Here the process fails to establish connection with IP address 127.0.0.1
 
-![Description](/SIEM-investigation/Phishing-Alert/screenshots/entry3-log.png)
+![Description](/SIEM-investigations/Phishing-Alert/screenshots/entry3-log.png)
 
 
 
