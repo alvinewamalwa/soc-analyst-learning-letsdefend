@@ -1,4 +1,7 @@
-
+## Context
+This document presents the investigation of the SOC137 - Malicious File/Script Download Attempt (Event ID: 76" alert.
+It outlines the analysis process, tools used, and key findings during the investigation.
+This documentation can also serve as a reference for others working through the same scenario.
 
 ## Alert Overview
 
