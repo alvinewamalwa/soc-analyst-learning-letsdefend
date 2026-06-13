@@ -87,17 +87,18 @@ Based on my investigation, this alert corresponds to a confirmed malicious docum
 
 * The SIEM system successfully blocked the download attempt
 * Historical activity shows signs of PowerShell abuse, which is commonly used in post-exploitation
-
-Although the file was blocked at the time of the alert, prior activity suggests that the endpoint may have been exposed to earlier malicious behavior.
+* Based on the investigation, the malicious file was successfully quarantined by the security controls in place. This is supported by the absence of further execution activity.
+*  Although the file was blocked at the time of the alert, prior activity suggests that the endpoint may have been exposed to earlier malicious behavior but the file was not accessed.
 
 ---
 
 ## Response Actions
 
-* The malicious file download attempt was blocked by the SIEM system
+* The malicious file download attempt was blocked by the SIEM system and therefere it was not accessed even if the C2 was requested
 * I proceeded to contain the affected endpoint as a precautionary measure at the Endpoint Security page
 * The threat was handled in line with containment procedures, preventing further risk to the system
 ![Alert Details](/SIEM-investigations/Malicious-File-Alert/screenshots/Host-Contained.png)
+
 ---
 
 ## Outcome
@@ -120,7 +121,7 @@ The alert correctly identified a real malicious attempt, and appropriate defensi
 
 ## Report Link
 
-Full investigation report: `https://app.letsdefend.io/case-management/casedetail/alvine12w/76`
+Full investigation report: https://app.letsdefend.io/case-management/casedetail/alvine12w/76
 
 ---
 
